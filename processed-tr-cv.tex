@@ -1,0 +1,209 @@
+%-------------------------
+% Resume in Latex
+% Author : Yagiz Erdem
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Yağız Erdem} \\ \vspace{1pt}
+    \small \href{mailto:yagizerdem819@gmail.com}{\underline{yagizerdem819@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/erdemyagiz/}{\underline{linkedin.com/in/erdemyagiz}} $|$
+    \href{https://github.com/yagizerdem}{\underline{github.com/yagizerdem}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Eğitim}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Dokuz Eylül Üniversitesi}{İzmir, Türkiye}
+    {Bilgisayar Mühendisliği Lisans Programı}{2023 -- 2027}
+
+  \resumeSubheading
+    {Bahçeşehir Koleji}{İzmir, Türkiye}
+    {Lise Diploması}{2018 -- 2022}
+
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Deneyim}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {TypeScript Geliştirici Stajyeri}{Haz. 2026 -- Ağu. 2026}
+    {Eliar Elektronik}{İstanbul, Türkiye}
+    \resumeItemListStart
+      \resumeItem{Büyük ölçekli bir monorepo ortamındaki TypeScript tabanlı uygulamalara üretim kodu katkısında bulundum; Vue.js, Nuxt.js, TypeScript ve Quasar kullanarak frontend özellikleri geliştirdim ve mevcut özelliklerin bakımını yaptım. Nuxt.js ekosistemi içerisinde backend API geliştirme ve uygulama mantığına katkıda bulundum, CI/CD iş akışları ile otomatik derleme ve dağıtım süreçlerinin geliştirilmesi ve bakımına destek oldum; hata ayıklama, özellik geliştirme ve mevcut üretim uygulamalarına yeni işlevlerin entegrasyonu üzerinde çalıştım.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Yazılım Mühendisliği Stajyeri}{Oca. 2025 -- Şub. 2025}
+    {Dokuz Eylül Üniversitesi}{İzmir, Türkiye}
+    \resumeItemListStart
+      \resumeItem{C\# ve .NET Core kullanarak komut satırı tabanlı bir Yer Radarı (GPR) veri işleme uygulaması olan GeoExtractor'ı geliştirdim. Ham MALÅ RD3/RD7 radar verilerini yapılandırılmış JSON formatına dönüştüren bir ayrıştırıcı geliştirdim, sinyal işleme algoritmalarını çalıştırmak için R Portable entegrasyonu gerçekleştirdim, işlenmiş radar çıktılarının Base64'ten PNG'ye otomatik dönüştürülmesini sağladım ve radar görüntüleri ile sinyal özelliklerini SQLite üzerinde sakladım. System.Diagnostics.Process kullanarak çoklu süreç yürütme mekanizmasını geliştirdim.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Yazılım Mühendisliği Stajyeri}{Ağu. 2025 -- Eyl. 2025}
+    {GameLab}{İstanbul, Türkiye}
+    \resumeItemListStart
+      \resumeItem{C++ kullanılarak geliştirilen Datuxa veri analizi uygulamasına katkıda bulundum; eksik, geçersiz ve tutarsız değerleri tespit edip işlemek için CSV veri temizleme işlevleri geliştirdim. Ayrıca masaüstü kullanıcı arayüzü geliştirme çalışmalarına katkıda bulundum ve mevcut arayüz bileşenlerinin kullanılabilirliğini iyileştirdim.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projeler}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{YSharp} $|$ \emph{Java, Yorumlayıcı, Recursive Descent Parser, AST}}{}
+
+  \small{
+    Dinamik tiplemeye ve C benzeri bir sözdizimine sahip yorumlanan bir betik dilini
+    Java ile sıfırdan tasarladım ve geliştirdim. Özel bir lexer, recursive-descent parser,
+    AST ve tree-walk evaluator dahil olmak üzere yorumlayıcının tüm çalışma hattını
+    geliştirdim. Birinci sınıf fonksiyonlar, prototip tabanlı nesneler, diziler, hash map'ler,
+    kontrol akışı ve hata yönetimi özelliklerini geliştirdim.
+  }
+  \vspace{6pt}
+
+  \resumeProjectHeading
+    {\textbf{Özel Regex Motoru} $|$ \emph{Java, Derleyici Tasarımı, NFA}}{}
+
+  \small{
+    Java'nın yerleşik regex implementasyonunu kullanmadan sıfırdan bir düzenli ifade
+    motoru geliştirdim. Düzenli ifadeleri ayrıştırıp özel bir Belirlenimsiz Sonlu Otomat
+    (NFA) yapısına derleyen bir derleyici hattı tasarladım. Eşleştirme işlemlerini
+    geleneksel backtracking kullanmadan NFA simülasyonu üzerinden gerçekleştirdim.
+  }
+  \vspace{6pt}
+
+  \resumeProjectHeading
+    {\textbf{Mano Assembly Derleyicisi \& Simülatörü} $|$
+    \emph{TypeScript, React, Bilgisayar Mimarisi}}{}
+
+  \small{
+    Bilgisayar mimarisi eğitimi için kapsamlı bir Mano Assembly geliştirme araç zinciri
+    oluşturdum. Lexer, parser ve iki geçişli assembler bileşenlerini TypeScript ile
+    sıfırdan geliştirdim. Komutların yürütülmesini ve işlemci durumundaki değişiklikleri
+    görselleştirmek için mikro-adım seviyesinde çalışan bir CPU simülatörü geliştirdim.
+  }
+
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Teknik Beceriler}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Programlama Dilleri}{: Java, TypeScript, JavaScript, C, C++, C\#, Python, SQL, Bash} \\
+    \textbf{Frameworkler \& Teknolojiler}{: Vue.js, Nuxt.js, React, Node.js, .Express.js, SQL, SQLite} \\
+    \textbf{Geliştirici Araçları}{: Git, Docker, GitHub Actions, Gradle, Maven, pnpm, IntelliJ IDEA, VS Code} \\
+    \textbf{Web \& Mobil}{: REST API'leri, Responsive Web Geliştirme, Mobil Uygulama Geliştirme, Kimlik Doğrulama,       Veritabanı Entegrasyonu, CI/CD}
+  }}
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}

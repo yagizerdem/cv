@@ -28,31 +28,31 @@ jobs:
 
       - name: cv-en
         run: |
-          python -c "
+          python -c '
           import os
           env = os.environ
-          PHONE_NUMBER = env.get('PHONE_NUMBER')
-          file = open('en-cv.tex', 'r', encoding='utf-8')
+          PHONE_NUMBER = env.get("PHONE_NUMBER")
+          file = open("en-cv.tex", "r", encoding="utf-8")
           content = file.read()
-          content = content.replace('PHONE-PLACEHOLDER', PHONE_NUMBER)
-          with open('processed-en-cv.tex', 'w', encoding='utf-8') as f:
+          content = content.replace("PHONE-PLACEHOLDER", PHONE_NUMBER)
+          with open("processed-en-cv.tex", "w", encoding="utf-8") as f:
             f.write(content)
           file.close()
-          "
+          '
 
       - name: cv-tr
         run: |
-          python -c "
+          python -c '
           import os
           env = os.environ
-          PHONE_NUMBER = env.get('PHONE_NUMBER')
-          file = open('tr-cv.tex', 'r', encoding='utf-8')
+          PHONE_NUMBER = env.get("PHONE_NUMBER")
+          file = open("tr-cv.tex", "r", encoding="utf-8")
           content = file.read()
-          content = content.replace('PHONE-PLACEHOLDER', PHONE_NUMBER)
-          with open('processed-tr-cv.tex', 'w', encoding='utf-8') as f:
+          content = content.replace("PHONE-PLACEHOLDER", PHONE_NUMBER)
+          with open("processed-tr-cv.tex", "w", encoding="utf-8") as f:
             f.write(content)
           file.close()
-          "
+          '
 
       - name: Compile PDFs
         run: |

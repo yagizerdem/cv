@@ -1,5 +1,5 @@
 name: ci
-run-name: ${{ github.actor }} is running private CI
+run-name: ${{ github.actor }} is running ci
 on:
   workflow_dispatch:
 
@@ -31,25 +31,25 @@ jobs:
 
       - name: cv-en
         run: |
-          python -c "
+          python -c '
           import re
-          with open('en-cv.tex', 'r', encoding='utf-8') as file:
+          with open("en-cv.tex", "r", encoding="utf-8") as file:
               content = file.read()
-          content = re.sub(r'PHONE-PLACEHOLDER\s*\$\|\$\s*', '', content)
-          with open('processed-en-cv.tex', 'w', encoding='utf-8') as f:
+          content = re.sub(r"PHONE-PLACEHOLDER\s*\$\|\$\s*", "", content)
+          with open("processed-en-cv.tex", "w", encoding="utf-8") as f:
               f.write(content)
-          "
+          '
 
       - name: cv-tr
         run: |
-          python -c "
+          python -c '
           import re
-          with open('tr-cv.tex', 'r', encoding='utf-8') as file:
+          with open("tr-cv.tex", "r", encoding="utf-8") as file:
               content = file.read()
-          content = re.sub(r'PHONE-PLACEHOLDER\s*\$\|\$\s*', '', content)
-          with open('processed-tr-cv.tex', 'w', encoding='utf-8') as f:
+          content = re.sub(r"PHONE-PLACEHOLDER\s*\$\|\$\s*", "", content)
+          with open("processed-tr-cv.tex", "w", encoding="utf-8") as f:
               f.write(content)
-          "
+          '
 
       - name: Compile PDFs
         run: |
