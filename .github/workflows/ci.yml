@@ -1,0 +1,59 @@
+name: ci
+run-name: ${{ github.actor }} is running private CI
+on:
+  workflow_dispatch:
+
+env:
+  PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended
+
+      - name: cv-en
+        run: |
+          python -c "
+          import re
+          with open('en-cv.tex', 'r', encoding='utf-8') as file:
+              content = file.read()
+          content = re.sub(r'PHONE-PLACEHOLDER\s*\$\|\$\s*', '', content)
+          with open('processed-en-cv.tex', 'w', encoding='utf-8') as f:
+              f.write(content)
+          "
+
+      - name: cv-tr
+        run: |
+          python -c "
+          import re
+          with open('tr-cv.tex', 'r', encoding='utf-8') as file:
+              content = file.read()
+          content = re.sub(r'PHONE-PLACEHOLDER\s*\$\|\$\s*', '', content)
+          with open('processed-tr-cv.tex', 'w', encoding='utf-8') as f:
+              f.write(content)
+          "
+
+      - name: Compile PDFs
+        run: |
+          mkdir -p dist
+          pdflatex -interaction=nonstopmode -output-directory=./dist processed-en-cv.tex
+          pdflatex -interaction=nonstopmode -output-directory=./dist processed-tr-cv.tex
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: cv-pdfs
+          path: dist/*.pdf
+          retention-days: 15
+          overwrite: true

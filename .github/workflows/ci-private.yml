@@ -32,10 +32,10 @@ jobs:
           import os
           env = os.environ
           PHONE_NUMBER = env.get('PHONE_NUMBER')
-          file = open('en-cv.tex', 'r')
+          file = open('en-cv.tex', 'r', encoding='utf-8')
           content = file.read()
           content = content.replace('PHONE-PLACEHOLDER', PHONE_NUMBER)
-          with open('processed-en-cv.tex', 'w') as f:
+          with open('processed-en-cv.tex', 'w', encoding='utf-8') as f:
             f.write(content)
           file.close()
           "
@@ -46,10 +46,10 @@ jobs:
           import os
           env = os.environ
           PHONE_NUMBER = env.get('PHONE_NUMBER')
-          file = open('tr-cv.tex', 'r')
+          file = open('tr-cv.tex', 'r', encoding='utf-8')
           content = file.read()
           content = content.replace('PHONE-PLACEHOLDER', PHONE_NUMBER)
-          with open('processed-tr-cv.tex', 'w') as f:
+          with open('processed-tr-cv.tex', 'w', encoding='utf-8') as f:
             f.write(content)
           file.close()
           "
