@@ -66,7 +66,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create cv-latest \
+          gh release view cv-latest >&2 2>/dev/null  || gh release create cv-latest \
             --latest \
             --title "Latest CV" \
             --notes "Automatically generated CV PDFs."
