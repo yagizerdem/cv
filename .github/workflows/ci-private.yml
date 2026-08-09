@@ -3,13 +3,43 @@ run-name: ${{ github.actor }} is running private CI
 on:
   workflow_dispatch:
 
+env:
+  PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
+
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v7
+
+      - uses: actions/setup-python@v7
         with:
-          node-version: "24"
-      - run: npm install -g bats
-      - run: bats -v
+          python-version: "3.13"
+
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended
+
+      - run: |
+          python -c "
+           import os
+           env = os.environ
+           PHONE_NUMBER = env.get("PHONE_NUMBER")
+           file = open("en-cv.tex", "r")
+           content = file.read()
+           content = content.replace("PHONE-PLACEHOLDER", PHONE_NUMBER)
+           with open("processed-en-cv.tex", "a") as f:
+             f.write(content)
+           file.close()
+           "
+
+      - run: pdflatex -interaction=nonstopmode -output-directory=./dist processed-en-cv.tex
+
+      - name: Upload Build Output
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-build-files
+          path: dist/
