@@ -66,12 +66,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release cv-latest \
+          gh release create cv-latest \
             --latest \
             --title "Latest CV" \
             --notes "Automatically generated CV PDFs."
 
-          gh release cv-latest \
+          gh release upload cv-latest \
             dist/cv-en.pdf \
             dist/cv-tr.pdf \
             --clobber
@@ -85,6 +85,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
+      - name: Set production branch
+        run: |
+          curl --fail --request PATCH \
+            "https://api.cloudflare.com/client/v4/accounts/${{ env.CLOUDFLARE_ACCOUNT_ID }}/pages/projects/cv" \
+            --header "Authorization: Bearer ${{ env.CLOUDFLARE_API_TOKEN }}" \
+            --header "Content-Type: application/json" \
+            --data '{"production_branch":"main"}'
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
