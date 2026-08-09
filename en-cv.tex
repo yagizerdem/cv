@@ -1,0 +1,212 @@
+%-------------------------
+% Resume in Latex
+% Author : Yagiz Erdem
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Yağız Erdem} \\ \vspace{1pt}
+    \small PHONE-PLACEHOLDER $|$ \href{mailto:yagizerdem819@gmail.com}{\underline{yagizerdem819@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/erdemyagiz/}{\underline{linkedin.com/in/erdemyagiz}} $|$
+    \href{https://github.com/yagizerdem}{\underline{github.com/yagizerdem}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Dokuz Eylül University}{İzmir, Türkiye}
+    {Bachelor of Science in Computer Engineering}{2023 -- 2027}
+
+  \resumeSubheading
+    {Bahçeşehir College}{İzmir, Türkiye}
+    {High School Diploma}{2018 -- 2022}
+
+\resumeSubHeadingListEnd
+
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {TypeScript Developer Intern}{Jun. 2026 -- Aug. 2026}
+    {Eliar Elektronik}{İstanbul, Türkiye}
+    \resumeItemListStart
+      \resumeItem{Contributed production code to TypeScript-based applications in a large-scale monorepo environment, developing and maintaining frontend features with Vue.js, Nuxt.js, TypeScript, and Quasar. Contributed to backend API development and application logic within the Nuxt.js ecosystem, assisted with CI/CD workflows and automated build and deployment pipelines, and collaborated on debugging, feature implementation, and integration of new functionality into existing production applications.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineering Intern}{Jan. 2025 -- Feb. 2025}
+    {Dokuz Eylül University}{İzmir, Türkiye}
+    \resumeItemListStart
+      \resumeItem{Developed GeoExtractor, a CLI-based Ground Penetrating Radar (GPR) data processing application using C\# and .NET Core. Implemented a parser for converting raw MALÅ RD3/RD7 radar data into structured JSON, integrated R Portable for executing signal processing algorithms, automated Base64-to-PNG conversion of processed outputs, and used SQLite for storing radar images and signal features. Implemented multi-process execution using System.Diagnostics.Process.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Software Engineering Intern}{Aug. 2025 -- Sep. 2025}
+    {GameLab}{İstanbul, Türkiye}
+    \resumeItemListStart
+      \resumeItem{Contributed to the Datuxa data analysis application using C++, developing CSV data-cleaning functionality to identify and process missing, invalid, and inconsistent values. Also contributed to desktop GUI development and improved the usability of existing interface components.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+      
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{YSharp} $|$ \emph{Java, Interpreter, Recursive Descent Parser, AST}}{}
+
+  \small{
+    Designed and implemented an interpreted scripting language from scratch in Java
+    with dynamic typing and a C-like syntax. Built the complete interpreter pipeline,
+    including a custom lexer, recursive-descent parser, AST, and tree-walk evaluator.
+    Implemented first-class functions, prototype-based objects, arrays, hash maps,
+    control flow, and exception handling.
+  }
+  \vspace{6pt}
+
+  \resumeProjectHeading
+    {\textbf{Custom Regex Engine} $|$ \emph{Java, Compiler Design, NFA}}{}
+
+  \small{
+    Developed a regular expression engine from scratch in Java without relying on
+    Java's built-in regex implementation. Designed a compiler pipeline that parses
+    regular expressions and compiles them into a custom Non-Deterministic Finite
+    Automaton (NFA), with pattern matching performed through NFA simulation without
+    traditional backtracking.
+  }
+  \vspace{6pt}
+
+  \resumeProjectHeading
+    {\textbf{Mano Assembly Compiler \& Simulator} $|$
+    \emph{TypeScript, React, Computer Architecture}}{}
+
+  \small{
+    Built a complete Mano Assembly development toolchain for computer architecture
+    education. Implemented the lexer, parser, and two-pass assembler from scratch
+    in TypeScript, along with a micro-step CPU simulator for visualizing instruction
+    execution and processor state changes.
+  }
+
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: Java, TypeScript, JavaScript, C, C++, C\#, Python, SQL, Bash} \\
+    \textbf{Frameworks \& Technologies}{: Vue.js, Nuxt.js, React, Node.js, .Express.js, SQL, SQLite} \\
+    \textbf{Developer Tools}{: Git, Docker, GitHub Actions, Gradle, Maven, pnpm, IntelliJ IDEA, VS Code} \\
+    \textbf{Web \& Mobile}{: REST APIs, Responsive Web Development, Mobile Development, Authentication,       Database Integration, CI/CD}
+  }}
+\end{itemize}
+
+
+%-------------------------------------------
+\end{document}
