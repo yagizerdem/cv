@@ -5,6 +5,12 @@ on:
 
 env:
   PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -45,15 +51,40 @@ jobs:
               f.write(content)
           "
 
-      - name: Compile PDFs
+      - name: Rename PDFs
         run: |
-          mkdir -p dist
-          pdflatex -interaction=nonstopmode -output-directory=./dist processed-en-cv.tex
-          pdflatex -interaction=nonstopmode -output-directory=./dist processed-tr-cv.tex
+          mv dist/processed-en-cv.pdf dist/cv-en.pdf
+          mv dist/processed-tr-cv.pdf dist/cv-tr.pdf
 
-      - uses: actions/upload-artifact@v7
+      - name: Create or update release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release cv-latest \
+            --latest \
+            --title "Latest CV" \
+            --notes "Automatically generated CV PDFs."
+
+          gh release cv-latest \
+            dist/cv-en.pdf \
+            dist/cv-tr.pdf \
+            --clobber
+
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Publish to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@3
         with:
-          name: cv-pdfs
-          path: dist/*.pdf
-          retention-days: 15
-          overwrite: true
+          apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: cv
+          directory: ./public
+          gitHubToken: ${{ env.GITHUB_TOKEN }}
