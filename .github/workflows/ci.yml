@@ -51,6 +51,12 @@ jobs:
               f.write(content)
           "
 
+      - name: Compile PDFs
+        run: |
+          mkdir -p dist
+          pdflatex -interaction=nonstopmode -output-directory=./dist processed-en-cv.tex
+          pdflatex -interaction=nonstopmode -output-directory=./dist processed-tr-cv.tex
+
       - name: Rename PDFs
         run: |
           mv dist/processed-en-cv.pdf dist/cv-en.pdf
