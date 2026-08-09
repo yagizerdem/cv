@@ -5,6 +5,9 @@ on:
 
 env:
   PHONE_NUMBER: ${{ secrets.PHONE_NUMBER }}
+  MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+  MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+  MAIL_TO: ${{ secrets.MAIL_TO }}
 
 jobs:
   check-bats-version:
@@ -38,8 +41,28 @@ jobs:
 
       - run: pdflatex -interaction=nonstopmode -output-directory=./dist processed-en-cv.tex
 
-      - name: Upload Build Output
-        uses: actions/upload-artifact@v4
+      - name: Compile PDF
+        run: |
+          mkdir -p dist
+          pdflatex \
+            -interaction=nonstopmode \
+            -output-directory=./dist \
+            processed-en-cv.tex
+
+      - name: Send CV by email
+        uses: dawidd6/action-send-mail@v18
         with:
-          name: production-build-files
-          path: dist/
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ MAIL_USERNAME }}
+          password: ${{ MAIL_PASSWORD }}
+          subject: "CV Build - ${{ github.sha }}"
+          to: ${{ MAIL_TO }}
+          from: ${{ MAIL_USERNAME }}
+          body: |
+            CV successfully compiled.
+
+            Repository: ${{ github.repository }}
+            Commit: ${{ github.sha }}
+          attachments: dist/processed-en-cv.pdf
