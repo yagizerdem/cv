@@ -75,13 +75,13 @@ jobs:
     permissions:
       contents: read
       deployments: write
-    name: Publish to Cloudflare Pages
+    name: publish
     steps:
       - name: Checkout
         uses: actions/checkout@v6
 
       - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@3
+        uses: cloudflare/pages-action@1
         with:
           apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
