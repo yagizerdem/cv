@@ -54,13 +54,11 @@ jobs:
           file.close()
           "
 
-      - name: Compile PDF
+      - name: Compile PDFs
         run: |
           mkdir -p dist
-          pdflatex \
-            -interaction=nonstopmode \
-            -output-directory=./dist \
-            processed-en-cv.tex
+          pdflatex -interaction=nonstopmode -output-directory=./dist processed-en-cv.tex
+          pdflatex -interaction=nonstopmode -output-directory=./dist processed-tr-cv.tex
 
       - name: Send CV by email
         uses: dawidd6/action-send-mail@v18
