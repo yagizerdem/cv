@@ -26,7 +26,7 @@ jobs:
             texlive-latex-extra \
             texlive-fonts-recommended
 
-      - name: Inject phone number
+      - name: cv-en
         run: |
           python -c "
           import os
@@ -36,6 +36,20 @@ jobs:
           content = file.read()
           content = content.replace('PHONE-PLACEHOLDER', PHONE_NUMBER)
           with open('processed-en-cv.tex', 'w') as f:
+            f.write(content)
+          file.close()
+          "
+
+      - name: cv-tr
+        run: |
+          python -c "
+          import os
+          env = os.environ
+          PHONE_NUMBER = env.get('PHONE_NUMBER')
+          file = open('tr-cv.tex', 'r')
+          content = file.read()
+          content = content.replace('PHONE-PLACEHOLDER', PHONE_NUMBER)
+          with open('processed-tr-cv.tex', 'w') as f:
             f.write(content)
           file.close()
           "
@@ -64,4 +78,4 @@ jobs:
 
             Repository: ${{ github.repository }}
             Commit: ${{ github.sha }}
-          attachments: dist/processed-en-cv.pdf
+          attachments: dist/processed-*.pdf
