@@ -1,12 +1,15 @@
-INTERNSHIP 2027-G7 (Lessons Learned Section)-261264
+INTERNSHIP 2027-G3 (Coordination Office / Project Management Team)-261260
+
 Primary Location Türkiye-Izmir
 NATO Body Headquarters Allied Land Command (HQ LANDCOM)
 Schedule Full-time
 Application Deadline 31-Aug-2026, 12:59:00 AM
 Salary (Pay Basis) : 52,156.89Turkish Lira (TRY) Monthly
 Grade INTERN
+ 
 Description: 
-LANDCOM INTERNSHIP PROGRAMME 2027
+ 
+LANDCOM INTERNSHIP PROGRAMME 2027 
 Following Commander Allied Land Command guidance, an Internship Program to provide current
 students and most recent graduates with the opportunity to intern at LANDCOM is to be introduced.
 Interns will benefit from the program by gaining an understanding of an international organization, while
@@ -18,17 +21,10 @@ The LIP is part of Commander Allied Land Command larger campaign to elevate and 
 visibility.
 CANDIDATES
 LIP will be available for the following periods:
-·         
-·         
-·         
-·         
-·         
-·         
-·         
-6 months internship program as part of, or complementary to a university degree program.
-6 months internship for, in principle, recent Bachelor graduated students who are interested in a
+·         6 months internship program as part of, or complementary to a university degree program.
+·         6 months internship for, in principle, recent Bachelor graduated students who are interested in a
 specific project that can be of support for a Master graduation program.
-6 months internship program for, in principle, recent Master or PhD graduated students (graduated
+·         6 months internship program for, in principle, recent Master or PhD graduated students (graduated
 less than 6 months ago) who are looking for work experience in an international organization as a first
 step to an international career.
 The closing date to submit an application for internship is as follows:
@@ -36,36 +32,61 @@ Applications for an internship shall reach LANDCOM no later than 30 August 2026.
 selection process pending the completion of necessary formalities required to work at NATO (security
 clearance, visas etc.) you will be invited.
 To qualify for an internship, the applicant must meet the following eligibility criteria:
-All applicants for an internship must be a citizen of a NATO member nation.
-A certificate given by the University stating that an internship on their subjects of study is necessary for
+·         All applicants for an internship must be a citizen of a NATO member nation.
+·         A certificate given by the University stating that an internship on their subjects of study is necessary for
 their professional development.
-Applicants must be proficient in the use of the English language.
-Applicants must have at least two years of successful university study or equivalent. The program is
+·         Applicants must be proficient in the use of the English language.
+·         Applicants must have at least two years of successful university study or equivalent. The program is
 open to current students or recent graduates (degree obtained within the last 18 months).
 CONDITIONS OF INTERNSHIP
-LANDCOM will provide interns with 52,026.50TRY net as a monthly lump sum to cover their stay, travel
+LANDCOM will provide interns with 52,026.30TRY net as a monthly lump sum to cover their stay, travel
 and subsistence. Selected interns are responsible for their accommodation and work permit
 arrangements. Travel tickets to and from Türkiye to their residence where they came from will be
 reimbursed up to total amount of 1200EUR.
 Interns are required to have social insurance coverage including health care, and this must be
-documented during the in-processing and take care of formalities with the Turkish authorities regarding
+documented during the in-processing, and take care of formalities with the Turkish authorities regarding
 their stay in Türkiye.
 HOW TO APPLY:
 Allied Land Command uses NATO Talent Acquisition Platform. In order to apply for the internship, please
 visit the platform at:  https://nato.taleo.net/careersection/2/jobsearch.ftl?lang=en and search for vacancies
 within Land Command HQ.
+ 
 A copy of the candidate's one page summary CV must be attached to the application. In addition, all
 interns have to submit a one-page essay giving details on their motivation for an internship at
 LANDCOM and on their expectations during the internship.
+ 
 Once a candidate has been selected, the start date of the internship period will be determined taking into
 account divisional needs, the availability of the selected candidate, and the security requirements.
-DETAILS of the INTERNSHIP- G7 (Lessons Learned Section)
-DETAILS OF PROJECT:
-• The post will report to the Lessons Learned Section Head (OLC PTDL 0010) under the G7 Division,
-which falls under the Plans Directorate. The G7 Division is responsible for collective training and combat
-readiness evaluation, along with the development of doctrine and Lessons Learned (LL) in LANDCOM
-and in LAND DOMAIN. The intern will interact with every Division within NATO LANDCOM HQ, with
-Lessons Learned partners across the Land Domain, and with the Joint Analysis Lessons Learned Centre
-(JALLC). His/her primary task will consist of data management and analysis using the Lessons Learned
-Portal. His/her secondary focus will be enabling integration of lessons across the Divisions and NATO.
-The applicant must demonstrate the ability and desire to work as part of a multinational team
+DETAILS of the INTERNSHIP-G3 COORDINATION OFFICE / PROJECT MANAGEMENT TEAM
+DETAILS OF POSITION: to support the Director of Management and DCOS Transformation & Integration
+with timelines, coordination, products and conducting working group meetings for infrastructure
+development, project management, battle rhythm coordination, and business continuity
+EXPECTED DELIVERABLE(S):
+·                  Coordinate and synchronize activities with ACOS G3 , DCOS Ops , DOM SWM and
+DCOS T&I Office.
+·                  Manage tasker tracker enterprise requirements.
+·                  Assist in the writing and proofing of staff products.
+·                  Support Divisional hosting of events at Izmir.
+·                  Coordinate meetings and travel for members.
+·                  Familiarize with project management (PM) principles and complete initial PM certification
+training.
+·                  Support infrastructure development projects and assists with management of HQ
+expansion project.
+·                  Support the Specific Environments Panel (SEP) Chair with work relating to the bi-annual
+meeting and inclusion in the Land Operations Working Group (LOWG).
+·                  Assist with development of unclassified website in support of the Specific Environments
+Panel - linked to the LANDCOM public-facing website.
+TYPE OF BACKGROUND/EDUCATION:
+Essential qualifications / experience:
+·                  University degree with focus on business or management 
+·                  Higher secondary education with emphasis on office management and product
+development
+·                  English Level SLP 3333 or HIGHER
+·                  NOTE: The work, both oral and written, in this post and in this Headquarters as a whole is
+conducted mainly in English and proficiency is a critical requirement.
+Desirable qualifications / experience:
+·                  Microsoft Office Certification
+·                  ITIL4 Certification
+·                  Project Management Professional (PMP) or PRINCE2 training or certification
+·                  Experience with BC or Disaster Recovery
+·                  Military Experience on staff
