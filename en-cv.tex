@@ -1,6 +1,7 @@
 %-------------------------
-% Resume in Latex - NATO LANDCOM Tailored
+% Resume in Latex
 % Author : Yagiz Erdem
+% Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
 
@@ -19,8 +20,21 @@
 \usepackage{tabularx}
 \input{glyphtounicode}
 
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -33,6 +47,7 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -42,8 +57,10 @@
   \vspace{-1pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-1pt}]
 
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
+%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
@@ -59,12 +76,23 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeProjectHeading}[2]{
-  \item
+    \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -72,14 +100,28 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
 
 \begin{center}
     \textbf{\Huge \scshape Yağız Erdem} \\ \vspace{1pt}
     \small PHONE-PLACEHOLDER $|$ \href{mailto:yagizerdem819@gmail.com}{\underline{yagizerdem819@gmail.com}} $|$
     \href{https://www.linkedin.com/in/erdemyagiz/}{\underline{linkedin.com/in/erdemyagiz}} $|$
-    \href{https://github.com/yagizerdem}{\underline{github.com/yagizerdem}} $|$ İzmir, Türkiye
+    \href{https://github.com/yagizerdem}{\underline{github.com/yagizerdem}}
 \end{center}
+
+%-----------PROFILE-----------
+\section{Profile}
+\small{
+Computer Engineering undergraduate with more than two years of university study,
+IEEE student-branch leadership, TOEFL iBT 73 (B2), and experience building digital
+information systems. Brings clear communication, structured information management,
+process planning, and independent problem solving. Motivated to support LANDCOM
+personnel and families through accessible guidance, efficient administration, and
+community-oriented service.
+}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -87,13 +129,14 @@
 
   \resumeSubheading
     {Dokuz Eylül University}{İzmir, Türkiye}
-    {Bachelor of Science in Computer Engineering}{2023 -- 2027}
+    {Bachelor of Science in Computer Engineering}{2023 -- Expected 2027}
 
   \resumeSubheading
     {Bahçeşehir College}{İstanbul, Türkiye}
     {High School Diploma}{2018 -- 2022}
 
-  \resumeItem{Ranked 15,788th nationwide out of 3.5 million candidates in the 2022 National University Entrance Exam (Top 0.5\%).}
+
+  \resumeItem{Placed in the top 0.5\% nationally in the 2022 Turkish University Entrance Examination (YKS), ranking 15,788th among approximately 3.5 million candidates.}
 
 \resumeSubHeadingListEnd
 
@@ -102,68 +145,63 @@
 \resumeSubHeadingListStart
 
   \resumeSubheading
-    {Project Development Coordinator and Team Lead}{Oct. 2025 -- May 2026}
-    {IEEE DEU Student Branch}{İzmir, Türkiye}
-    \resumeItemListStart
-      \resumeItem{Directed multi-disciplinary student project teams, establishing standardized project timelines, milestone tracking, and task allocation procedures.}
-      \resumeItem{Facilitated weekly working group coordination meetings, tracked enterprise deliverables, and compiled regular progress documentation for branch leadership.}
-      \resumeItem{Supervised end-to-end software and game development project lifecycles, ensuring alignment with stakeholder requirements and quality standards.}
-    \resumeItemListEnd
-
-  \resumeSubheading
     {Software Developer Intern}{Jun. 2026 -- Aug. 2026}
     {Eliar Elektronik}{İstanbul, Türkiye}
     \resumeItemListStart
-      \resumeItem{Contributed to large-scale enterprise web applications using Vue.js, Nuxt.js, and TypeScript, developing responsive and accessible front-end interfaces.}
-      \resumeItem{Supported API integration and automated CI/CD pipeline deployments, adhering to strict continuous delivery and production stability requirements.}
-      \resumeItem{Participated in agile ceremonies, technical review sessions, and collaborative documentation to maintain software quality and team synchronization.}
+      \resumeItem{Collaborated across frontend and backend production applications, implementing and documenting features, resolving issues, and coordinating changes in a large-scale TypeScript monorepo.}
+      \resumeItem{Supported CI/CD workflows and automated build and deployment processes while working independently within established delivery procedures.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Project Development Coordinator and Team Lead}{Oct. 2025 -- May 2026}
+    {IEEE DEU Student Branch}{İzmir, Türkiye}
+
+    \resumeItemListStart
+      \resumeItem{Led the Project Development Coordination Team, managing project planning, technology selection, task allocation, implementation, and progress throughout the software development lifecycle.}
+      \resumeItem{Established working processes, organized project information, and communicated responsibilities and technical decisions clearly to team members.}
     \resumeItemListEnd
 
   \resumeSubheading
     {Software Engineering Intern}{Aug. 2025 -- Sep. 2025}
     {Aitial}{İstanbul, Türkiye}
     \resumeItemListStart
-      \resumeItem{Developed automated data-cleaning and validation routines in C++ to process structured CSV datasets and remediate missing or corrupted data.}
-      \resumeItem{Improved desktop GUI usability and streamlined data visualization modules for end-user data analysis workflows.}
+      \resumeItem{Developed CSV data-cleaning functionality that identified missing, invalid, and inconsistent records, improving information accuracy and organization; also enhanced desktop interface usability.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-      
+
 %-----------PROJECTS-----------
-\section{Projects \& Technical Initiatives}
+\section{Selected Projects}
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
-    {\textbf{Campusly -- Operations \& Workflow Management Platform} $|$ \emph{React, Express.js, PostgreSQL}}{2025 -- 2026}
+    {\textbf{Campusly -- IEEE Campus Operations Platform} $|$
+    \emph{TypeScript, React, Express.js, PostgreSQL, Prisma ORM}}{2025 -- 2026}
     \resumeItemListStart
-      \resumeItem{Designed and implemented a centralized web platform to streamline operational workflows, registration forms, member tracking, and digital media records.}
-      \resumeItem{Configured role-based access control, secure RESTful APIs, and structured relational schemas to manage organizational administrative tasks.}
+      \resumeItem{Designed and developed a web and mobile platform for IEEE campus operations, centralizing clubs, member records, events, forms, posts, and media to improve coordination and access to information.}
+      \resumeItem{Built role-based workflows, REST APIs, structured database models, and form-based information collection, creating a maintainable digital hub for administrators and users.}
     \resumeItemListEnd
 
   \resumeProjectHeading
-    {\textbf{Data Analytics \& Office Systems Management} $|$ \emph{MS Excel, Word, Access, PowerPoint, Outlook}}{}
+    {\textbf{GeoExtractor -- Structured Data Processing System} $|$
+    \emph{C\#, .NET Core, R, SQLite, JSON}}{Jan. 2025 -- Feb. 2025}
     \resumeItemListStart
-      \resumeItem{Constructed structured operational models in Microsoft Excel utilizing PivotTables, advanced lookup functions (XLOOKUP, VLOOKUP), and data visualization dashboards.}
-      \resumeItem{Authored structured executive reports, agendas, and technical documentation using Microsoft Word and PowerPoint; managed relational records and queries in Microsoft Access.}
-    \resumeItemListEnd
-
-  \resumeProjectHeading
-    {\textbf{GeoExtractor -- Automated Data Processing Pipeline} $|$ \emph{C\#, .NET Core, R, SQLite}}{Jan. 2025 -- Feb. 2025}
-    \resumeItemListStart
-      \resumeItem{Built an automated CLI pipeline converting raw radar binary data into structured JSON formats and persistent SQLite records, reducing manual processing overhead.}
+      \resumeItem{Converted complex raw radar files into organized JSON and SQLite records, automated processing and file organization, and produced consistent outputs for technical users.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-%----------- SKILLS -----------
-\section{Skills \& Competencies}
+%-----------SKILLS-----------
+\section{Relevant Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Project \& Operations Management}{: Project Coordination, Task Tracking, Timeline Management, Technical Documentation, Process Optimization} \\
-    \textbf{Web \& Systems Development}{: Responsive Web Design, React, Vue.js, Express.js, TypeScript, REST APIs, SQL, Git} \\
-    \textbf{Productivity \& Office Tools}{: Microsoft Excel (Advanced), Word, PowerPoint, Access, Outlook} \\
-    \textbf{Languages}{: Turkish (Native), English (Full Professional Proficiency)} \\
+    \textbf{Administration \& Communication}{: Process planning, task coordination, research, information organization, clear written documentation, presentations, teamwork, independent work} \\
+    \textbf{Office \& Digital Tools}{: Microsoft Excel (PivotTables, XLOOKUP/VLOOKUP, charts), Word, PowerPoint, Outlook, Access, PDF documents} \\
+    \textbf{Information Systems}{: TypeScript, React, Express.js, PostgreSQL, Prisma ORM, SQL, JSON, Docker, Git} \\
+    \textbf{Languages}{: Turkish (Native), English (B2, TOEFL iBT 73)}
   }}
 \end{itemize}
 
+
+%-------------------------------------------
 \end{document}
