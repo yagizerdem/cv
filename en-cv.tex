@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -54,8 +54,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-1pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-1pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -124,6 +124,9 @@
     {Bahçeşehir College}{İstanbul, Türkiye}
     {High School Diploma}{2018 -- 2022}
 
+
+  \resumeItem{Ranked 15,788th out of approximately 3.500.000 (3.5 million) candidates nationwide in the 2022 Turkish University Entrance Examination (YKS), placing in the top 0.5\%.}
+
 \resumeSubHeadingListEnd
 
 
@@ -133,31 +136,73 @@
 \resumeSubHeadingListStart
 
   \resumeSubheading
-    {TypeScript Developer Intern}{Jun. 2026 -- Aug. 2026}
+    {Software Developer Intern}{Jun. 2026 -- Aug. 2026}
     {Eliar Elektronik}{İstanbul, Türkiye}
     \resumeItemListStart
       \resumeItem{Contributed production code to TypeScript-based applications in a large-scale monorepo environment, developing and maintaining frontend features with Vue.js, Nuxt.js, TypeScript, and Quasar. Contributed to backend API development and application logic within the Nuxt.js ecosystem, assisted with CI/CD workflows and automated build and deployment pipelines, and collaborated on debugging, feature implementation, and integration of new functionality into existing production applications.}
     \resumeItemListEnd
 
   \resumeSubheading
-    {Software Engineering Intern}{Jan. 2025 -- Feb. 2025}
-    {Dokuz Eylül University}{İzmir, Türkiye}
-    \resumeItemListStart
-      \resumeItem{Developed GeoExtractor, a CLI-based Ground Penetrating Radar (GPR) data processing application using C\# and .NET Core. Implemented a parser for converting raw MALÅ RD3/RD7 radar data into structured JSON, integrated R Portable for executing signal processing algorithms, automated Base64-to-PNG conversion of processed outputs, and used SQLite for storing radar images and signal features. Implemented multi-process execution using System.Diagnostics.Process.}
-    \resumeItemListEnd
+    {Project Development Coordinator and Team Lead}{Oct. 2025 -- May 2026}
+    {IEEE DEU Student Branch}{İzmir, Türkiye}
+  
+  \resumeItemListStart
+    \resumeItem{Led the Project Development Coordination Team, overseeing project
+    planning, technology selection, task allocation, and implementation processes.
+    Coordinated team members throughout the software development lifecycle and
+    contributed to technical projects involving C\# and game development.}
+  \resumeItemListEnd
+
 
   \resumeSubheading
     {Software Engineering Intern}{Aug. 2025 -- Sep. 2025}
     {GameLab}{İstanbul, Türkiye}
     \resumeItemListStart
       \resumeItem{Contributed to the Datuxa data analysis application using C++, developing CSV data-cleaning functionality to identify and process missing, invalid, and inconsistent values. Also contributed to desktop GUI development and improved the usability of existing interface components.}
-    \resumeItemListEnd
+  \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+ \resumeSubHeadingListEnd
       
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {\textbf{Microsoft Office and Data Management} $|$
+  \emph{Excel, Word, Outlook, PowerPoint, Access}}{}
+
+\small{
+  Used Microsoft Excel to organize and analyze structured datasets through
+  PivotTables, formulas, XLOOKUP, VLOOKUP, charts, and data visualization.
+  Prepared professional documents, reports, forms, presentations, and schedules
+  using Word, PowerPoint, and Outlook, and created basic databases, queries,
+  forms, and structured records in Microsoft Access.
+}
+
+
+\resumeProjectHeading
+  {\textbf{GeoExtractor -- GPR Data Processing System} $|$
+  \emph{C\#, .NET Core, R, SQLite, JSON}}{Jan. 2025 -- Feb. 2025}
+
+\small{
+  Developed a CLI based system for processing Ground Penetrating Radar data.
+  Built a parser that converted raw MALA RD3/RD7 radar files into structured
+  JSON, integrated R Portable for signal-processing operations, and automated
+  Base64-to-PNG conversion of analysis outputs. Stored processed radar images
+  and signal features in SQLite and implemented multi-process execution and
+  automated file organization using C#/.NET .
+}
+
+  \resumeProjectHeading
+    {\textbf{Campusly -- IEEE Campus Operations Platform} $|$
+    \emph{TypeScript, React, Express.js, PostgreSQL, Prisma ORM}}{2025 -- 2026}
+
+  \small{
+    Designed and developed Campusly, a web and mobile application for IEEE to
+    manage on-campus operations. Centralized clubs, memberships, events, forms,
+    posts, and media in one platform, with REST APIs, database validation, and
+    role-based access control.
+  }
 
   \resumeProjectHeading
     {\textbf{YSharp} $|$ \emph{Java, Interpreter, Recursive Descent Parser, AST}}{}
@@ -169,41 +214,19 @@
     Implemented first-class functions, prototype-based objects, arrays, hash maps,
     control flow, and exception handling.
   }
-  \vspace{6pt}
 
-  \resumeProjectHeading
-    {\textbf{Custom Regex Engine} $|$ \emph{Java, Compiler Design, NFA}}{}
-
-  \small{
-    Developed a regular expression engine from scratch in Java without relying on
-    Java's built-in regex implementation. Designed a compiler pipeline that parses
-    regular expressions and compiles them into a custom Non-Deterministic Finite
-    Automaton (NFA), with pattern matching performed through NFA simulation without
-    traditional backtracking.
-  }
-  \vspace{6pt}
-
-  \resumeProjectHeading
-    {\textbf{Mano Assembly Compiler \& Simulator} $|$
-    \emph{TypeScript, React, Computer Architecture}}{}
-
-  \small{
-    Built a complete Mano Assembly development toolchain for computer architecture
-    education. Implemented the lexer, parser, and two-pass assembler from scratch
-    in TypeScript, along with a micro-step CPU simulator for visualizing instruction
-    execution and processor state changes.
-  }
 
 \resumeSubHeadingListEnd
 
-%-----------PROGRAMMING SKILLS-----------
+%----------- SKILLS -----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Languages}{: Java, TypeScript, JavaScript, C, C++, C\#, Python, SQL, Bash} \\
-    \textbf{Frameworks \& Technologies}{: Vue.js, Nuxt.js, React, Node.js, .Express.js, SQL, SQLite} \\
-    \textbf{Developer Tools}{: Git, Docker, GitHub Actions, Gradle, Maven, pnpm, IntelliJ IDEA, VS Code} \\
-    \textbf{Web \& Mobile}{: REST APIs, Responsive Web Development, Mobile Development, Authentication,       Database Integration, CI/CD}
+    \textbf{Programming}{: TypeScript, Java, Python, SQL, Bash} \\
+    \textbf{Frameworks \& Data}{: React, Express.js, Prisma ORM, PostgreSQL} \\
+    \textbf{Office Programs}{: Excel, Word, Outlook, PowerPoint, Access} \\
+    \textbf{Developer Tools}{: Git, Docker, GitHub Actions, IntelliJ IDEA, VS Code} \\
+    \textbf{Languages}{: Turkish (Native), English (B2, TOEFL iBT: 73)} \\
   }}
 \end{itemize}
 
